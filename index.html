@@ -184,6 +184,68 @@
       font-weight: bold;
       color: #5e3370;
     }
+
+    @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0;
+    flex: 1;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu li {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-menu a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .content-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .team-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
   </style>
 </head>
 <body>
@@ -301,6 +363,7 @@
       menuItems.forEach(item => item.classList.remove('active'));
       event.target.classList.add('active');
     }
+
   </script>
 </body>
 </html>
